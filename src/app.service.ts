@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import Axios from Axios;
+import Axios from 'axios';
 
 @Injectable()
 export class AppService {
@@ -8,22 +8,24 @@ export class AppService {
   }
 
   async checkConnect() {
-    const url =  'https://testbase/ws/ExchangerRMS?wsdl'
+    const url = 'https://testbase/ws/ExchangerRMS?wsdl';
 
-    cosnt headers = {
+    const headers = {
       'user-agent': 'sampleTest',
       'Content-Type': 'text/xml;charset=UTF-8',
-      'soapAction': ''
+      'soapAction': 'fuck',
       'autorization': 'Base',
-      
-    }
+    };
 
-    const xml = 
+    const xml = {
+
+    };
+    
     axios({
-      method:'post',
+      method: 'post',
       url,
       headers,
-      data:xml,
+      data: xml,
     }).then((responce) =>   {
       const data = parser.parse(response.data, {});
       console.log(data['s:Envelope']['s:Body'].GetByUIDResponse.GetByUIDResult)
