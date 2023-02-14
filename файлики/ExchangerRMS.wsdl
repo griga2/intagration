@@ -1,0 +1,192 @@
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.hclass.ru/hl1c" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd1="http://www.hclass.ru/hl1c" name="ExchangerRMS" targetNamespace="http://www.hclass.ru/hl1c">
+<types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xs1="http://www.hclass.ru/hl1c" targetNamespace="http://www.hclass.ru/hl1c" elementFormDefault="qualified">
+<xs:element name="GetDataFromRMS">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="mdata" type="xs:string"/>
+<xs:element name="guid" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetDataFromRMSResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="return" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="SendDataToRMS">
+...
+</xs:element>
+<xs:element name="SendDataToRMSResponse">
+...
+</xs:element>
+<xs:element name="TransferFile">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="nameFile" type="xs:string"/>
+<xs:element name="dataFile" type="xs:base64Binary"/>
+<xs:element name="directoryToSave" type="xs:string"/>
+<xs:element name="guid" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="TransferFileResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="return" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="AdministrationOfExtension">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="data" type="xs:string"/>
+<xs:element name="dataBinary" type="xs:base64Binary" nillable="true"/>
+<xs:element name="guid" type="xs:string"/>
+<xs:element name="comment" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="AdministrationOfExtensionResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="return" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:schema>
+</types>
+<message name="GetDataFromRMSRequestMessage">
+<part name="parameters" element="tns:GetDataFromRMS"/>
+</message>
+<message name="GetDataFromRMSResponseMessage">
+<part name="parameters" element="tns:GetDataFromRMSResponse"/>
+</message>
+<message name="SendDataToRMSRequestMessage">
+<part name="parameters" element="tns:SendDataToRMS"/>
+</message>
+<message name="SendDataToRMSResponseMessage">
+<part name="parameters" element="tns:SendDataToRMSResponse"/>
+</message>
+<message name="TransferFileRequestMessage">
+<part name="parameters" element="tns:TransferFile"/>
+</message>
+<message name="TransferFileResponseMessage">
+<part name="parameters" element="tns:TransferFileResponse"/>
+</message>
+<message name="AdministrationOfExtensionRequestMessage">
+<part name="parameters" element="tns:AdministrationOfExtension"/>
+</message>
+<message name="AdministrationOfExtensionResponseMessage">
+<part name="parameters" element="tns:AdministrationOfExtensionResponse"/>
+</message>
+<portType name="ExchangerRMSPortType">
+<operation name="GetDataFromRMS">
+<input message="tns:GetDataFromRMSRequestMessage"/>
+<output message="tns:GetDataFromRMSResponseMessage"/>
+</operation>
+<operation name="SendDataToRMS">
+<input message="tns:SendDataToRMSRequestMessage"/>
+<output message="tns:SendDataToRMSResponseMessage"/>
+</operation>
+<operation name="TransferFile">
+<input message="tns:TransferFileRequestMessage"/>
+<output message="tns:TransferFileResponseMessage"/>
+</operation>
+<operation name="AdministrationOfExtension">
+<input message="tns:AdministrationOfExtensionRequestMessage"/>
+<output message="tns:AdministrationOfExtensionResponseMessage"/>
+</operation>
+</portType>
+<binding name="ExchangerRMSSoapBinding" type="tns:ExchangerRMSPortType">
+<soapbind:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<operation name="GetDataFromRMS">
+<soapbind:operation style="document" soapAction="http://www.hclass.ru/hl1c#ExchangerRMS:GetDataFromRMS"/>
+<input>
+<soapbind:body use="literal"/>
+</input>
+<output>
+<soapbind:body use="literal"/>
+</output>
+</operation>
+<operation name="SendDataToRMS">
+<soapbind:operation style="document" soapAction="http://www.hclass.ru/hl1c#ExchangerRMS:SendDataToRMS"/>
+<input>
+<soapbind:body use="literal"/>
+</input>
+<output>
+<soapbind:body use="literal"/>
+</output>
+</operation>
+<operation name="TransferFile">
+<soapbind:operation style="document" soapAction="http://www.hclass.ru/hl1c#ExchangerRMS:TransferFile"/>
+<input>
+<soapbind:body use="literal"/>
+</input>
+<output>
+<soapbind:body use="literal"/>
+</output>
+</operation>
+<operation name="AdministrationOfExtension">
+<soapbind:operation style="document" soapAction="http://www.hclass.ru/hl1c#ExchangerRMS:AdministrationOfExtension"/>
+<input>
+<soapbind:body use="literal"/>
+</input>
+<output>
+<soapbind:body use="literal"/>
+</output>
+</operation>
+</binding>
+<binding name="ExchangerRMSSoap12Binding" type="tns:ExchangerRMSPortType">
+<soap12bind:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<operation name="GetDataFromRMS">
+<soap12bind:operation style="document" soapAction="http://www.hclass.ru/hl1c#ExchangerRMS:GetDataFromRMS"/>
+<input>
+<soap12bind:body use="literal"/>
+</input>
+<output>
+<soap12bind:body use="literal"/>
+</output>
+</operation>
+<operation name="SendDataToRMS">
+<soap12bind:operation style="document" soapAction="http://www.hclass.ru/hl1c#ExchangerRMS:SendDataToRMS"/>
+<input>
+<soap12bind:body use="literal"/>
+</input>
+<output>
+<soap12bind:body use="literal"/>
+</output>
+</operation>
+<operation name="TransferFile">
+<soap12bind:operation style="document" soapAction="http://www.hclass.ru/hl1c#ExchangerRMS:TransferFile"/>
+<input>
+<soap12bind:body use="literal"/>
+</input>
+<output>
+<soap12bind:body use="literal"/>
+</output>
+</operation>
+<operation name="AdministrationOfExtension">
+<soap12bind:operation style="document" soapAction="http://www.hclass.ru/hl1c#ExchangerRMS:AdministrationOfExtension"/>
+<input>
+<soap12bind:body use="literal"/>
+</input>
+<output>
+<soap12bind:body use="literal"/>
+</output>
+</operation>
+</binding>
+<service name="ExchangerRMS">
+<port name="ExchangerRMSSoap" binding="tns:ExchangerRMSSoapBinding">
+<documentation>
+<wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" conformsTo="http://ws-i.org/profiles/basic/1.1"/>
+</documentation>
+<soapbind:address location="https://domenname/testbase/ws/ExchangerRMS"/>
+</port>
+<port name="ExchangerRMSSoap12" binding="tns:ExchangerRMSSoap12Binding">
+<soap12bind:address location="https://domenname/testbase/ws/ExchangerRMS"/>
+</port>
+</service>
+</definitions>
