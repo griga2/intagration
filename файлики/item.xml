@@ -1,0 +1,31 @@
+<GetDataFromRMS xmlns="http://www.hclass.ru/hl1c">
+         <mdata>&lt;data_1c&gt;
+               &lt;Param ID="ТипЗапроса" Val="Retail_ItemDesc"/&gt;
+               &lt;Param ID="Артикул" Val="109734892"/&gt;
+               &lt;Param ID="Наименование" Val="Товар супер тест 1"/&gt;
+               &lt;Param ID="ПолноеНаименование" Val="109734892-Товар супер тест 1"/&gt;
+               &lt;Param ID="АлкогольнаяПродукция" Val="Нет"/&gt;
+               &lt;Param ID="ВесНетто" Val="1"/&gt;
+               &lt;Param ID="ПризнакВесовогоТовара" Val="Да"/&gt;
+               &lt;Param ID="ВидАлкогольнойПродукцииЕГАИС" Val=""/&gt;
+               &lt;Param ID="ВидНоменклатуры" Val="Товар"/&gt;
+               &lt;Param ID="ЕдИзм" Val="кг"/&gt;
+               &lt;Param ID="Крепость" Val="NaN"/&gt;
+               &lt;Param ID="ОбъемВДекалитрах" Val=""/&gt;
+               &lt;Param ID="ПодконтрольнаяПродукцияВЕТИС" Val="Нет"/&gt;
+               &lt;Param ID="РазрешитьВводДробногоКоличества" Val="Да"/&gt;
+               &lt;Param ID="СтавкаНДС" Val="20"/&gt;
+               &lt;Param ID="ТипНоменклатуры" Val="Товар"/&gt;
+               &lt;Param ID="ТоварнаяГруппа" Val="Новые товары"/&gt;
+               &lt;Param ID="ОсобенностьУчета" Val="БезОсобенностейУчета"/&gt;
+               &lt;Param ID="ТабачнаяПродукция" Val="Нет"/&gt;
+               &lt;Table ID="ШтрихКоды"&gt;
+                  &lt;Row&gt;
+                     &lt;Col ID="ШтрихКод" Val="28705"/&gt;
+                     &lt;Col ID="ТипШтрихКода" Val="CODE39"/&gt;
+                  &lt;/Row&gt;
+               &lt;/Table&gt;
+               &lt;/data_1c&gt;
+         </mdata>
+         <guid>eacaa172-3024-435d-b2af-e683c4f0e9a3</guid>
+</GetDataFromRMS>

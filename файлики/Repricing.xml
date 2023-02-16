@@ -1,0 +1,21 @@
+<GetDataFromRMS xmlns="http://www.hclass.ru/hl1c">
+            <mdata>&lt;data_1c xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"&gt;
+   &lt;Param ID="ТипЗапроса" Val="Retail_Reprice"/&gt;
+   &lt;Param ID="КодРМСМагазина" Val="5211"/&gt;
+   &lt;Param ID="Id" Val="3791603"/&gt;
+   &lt;Param ID="ДатаДокумента" Val="20230126114105"/&gt;
+   &lt;Param ID="Комментарий" Val="Документ переоценки #Номер документа 3791603"/&gt;
+   &lt;Table ID="Товары"&gt;
+      &lt;Row&gt;
+         &lt;Col ID="Артикул" Val="109790827"/&gt;
+         &lt;Col ID="Цена" Val="52.5"/&gt;
+      &lt;/Row&gt;
+      &lt;Row&gt;
+         &lt;Col ID="Артикул" Val="109790931"/&gt;
+         &lt;Col ID="Цена" Val="20"/&gt;
+      &lt;/Row&gt;
+   &lt;/Table&gt;
+&lt;/data_1c&gt;
+</mdata>
+            <guid>a5cc3e7b-94e5-4eb9-9416-f4c64f2f44fd</guid>
+</GetDataFromRMS>

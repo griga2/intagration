@@ -1,0 +1,22 @@
+<GetDataFromRMS xmlns="http://www.hclass.ru/hl1c">
+            <mdata>	&lt;data_1c&gt;
+			&lt;Param ID="ТипЗапроса" Val="Retail_Сontractor"/&gt;
+			&lt;Param ID="КодРМС" Val="40138"/&gt;
+			&lt;Param ID="Родитель" Val="Поставщики"/&gt;
+			&lt;Param ID="Наименование" Val="Поставщик тест"/&gt;
+			&lt;Param ID="ИНН" Val="5400000000"/&gt;
+			&lt;Param ID="ОКПО" Val="0120172"/&gt;
+			&lt;Param ID="ОГРН" Val="1025403000511"/&gt;
+			&lt;Param ID="КПП" Val="540001001"/&gt;
+			&lt;Param ID="НаименованиеПолное" Val="Закрытое акционерное общество &amp;quot;поставщик &amp;quot;тест&amp;quot;"/&gt;
+			&lt;Param ID="ЮрФизЛицо" Val="ЮрЛицо"/&gt;
+			&lt;Param ID="ЮрАдресКонтрагента" Val="630030, Российская Федерация, Новосибирская область, Новосибирск г, Ленина ул, дом 1"/&gt;
+			&lt;Param ID="ФактАдресКонтрагента" Val="630030, Российская Федерация, Новосибирская область, Новосибирск г, Ленина ул, дом 2"/&gt;
+			&lt;Param ID="ПочтовыйАдресКонтрагента" Val="630030, Российская Федерация, Новосибирская область, Новосибирск г, Ленина ул, дом 2"/&gt;
+			&lt;Param ID="ТелефонКонтрагента" Val="-"/&gt;
+			&lt;Param ID="EmailКонтрагента" Val="manager.1@test.ru,test@ngs.ru,v@test.ru,zakaz@test.ru"/&gt;
+			&lt;/data_1c&gt;
+			</mdata>
+            <guid>e567719e-9a5a-422e-9c76-75ddfe18ad5e</guid>
+</GetDataFromRMS>
+

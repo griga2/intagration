@@ -1,0 +1,8 @@
+<m:GetDataFromRMSResponse xmlns:m="http://www.hclass.ru/hl1c">
+			<m:return xmlns:xs="http://www.w3.org/2001/XMLSchema">
+				&lt;data_1c&gt;
+				&lt;Param ID="РезультатОбработкиПакета" Val="Успешно"/&gt;
+				&lt;Param ID="Описание" Val="Заказ поставщику успешно создан/обновлен (Заказ поставщику 01144 от 07.02.2022 12:20:55)"/&gt;
+				&lt;/data_1c&gt;
+			</m:return>
+</m:GetDataFromRMSResponse>

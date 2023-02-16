@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><messages>
+<GetDataFromRMS_Input>
+      <part xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="parameters">
+         <GetDataFromRMS xmlns="http://www.hclass.ru/hl1c">
+            <mdata>&lt;data_1c&gt;
+			&lt;Param ID="ТипЗапроса" Val="Retail_OrderToSupplier"/&gt;
+			&lt;Param ID="НомерРМСЗаказа" Val="64154016"/&gt;
+			&lt;Param ID="КодРМСПоставщика" Val="51714"/&gt;
+			&lt;Param ID="КодРМСМагазина" Val="5181"/&gt;
+			&lt;Param ID="ДатаПоступления" Val="20220212000000"/&gt;
+			&lt;Param ID="Комментарий" Val="Номер заказа 64154016"/&gt;
+			&lt;Table ID="Товары"&gt;
+			&lt;Row&gt;
+			&lt;Col ID="Артикул" Val="109281176"/&gt;
+			&lt;Col ID="Количество" Val="3"/&gt;
+			&lt;Col ID="Цена" Val="105"/&gt;
+			&lt;Col ID="СтавкаНДС" Val="0"/&gt;
+			&lt;Col ID="НДС" Val="0"/&gt;
+			&lt;Col ID="Сумма" Val="315"/&gt;
+			&lt;/Row&gt;
+			&lt;Row&gt;
+			&lt;Col ID="Артикул" Val="109043725"/&gt;
+			&lt;Col ID="Количество" Val="4"/&gt;
+			&lt;Col ID="Цена" Val="109"/&gt;
+			&lt;Col ID="СтавкаНДС" Val="0"/&gt;
+			&lt;Col ID="НДС" Val="0"/&gt;
+			&lt;Col ID="Сумма" Val="436"/&gt;
+			&lt;/Row&gt;
+			&lt;/Table&gt;
+			&lt;/data_1c&gt;
+			</mdata>
+            <guid>0b9e5bd3-8d6d-4166-8138-4a5354662de4</guid>
+         </GetDataFromRMS>
+      </part>
+   </GetDataFromRMS_Input>
