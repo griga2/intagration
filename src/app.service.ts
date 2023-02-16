@@ -39,12 +39,15 @@ export class AppService {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     const xml2js = require('xml2js');
 
+    let returnToXML = 'lol';
+
+    const strSoapEnvelope = 'soap:Envelope';
+    const strGetDataFromRMSResponse = 'GetDataFromRMSResponse';
     const Responce = {
       'soap:Envelope': {
         'soap:Body': {
-          GetDataFromRMS: {
-            mdata: 'string',
-            guid: 'string',
+          GetDataFromRMSResponse: {
+            return: returnToXML,
           },
         },
       },
@@ -57,17 +60,21 @@ export class AppService {
 
     xmlOutput = this.placeInString(
       xmlOutput,
-      'xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"',
-      xmlOutput.indexOf('GetDataFromRMS'),
+      ' xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" ',
+      xmlOutput.indexOf(strSoapEnvelope) + strSoapEnvelope.length,
+    );
+    xmlOutput = this.placeInString(
+      xmlOutput,
+      ' xmlns="http://www.hclass.ru/hl1c" ',
+      xmlOutput.indexOf(strGetDataFromRMSResponse) +
+        strGetDataFromRMSResponse.length,
     );
 
     return xmlOutput;
   }
 
   placeInString(str, substr, index) {
-    return (
-      str.substr(0, index + 1) + substr + str.substr(index + 1 + substr.length)
-    );
+    return str.substr(0, index) + substr + '\n' + str.substr(index);
   }
   // <?xml version="1.0" encoding="utf-8"?>
   // <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
