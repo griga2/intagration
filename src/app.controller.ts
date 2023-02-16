@@ -36,7 +36,7 @@ export class AppController {
 
   @Post('/testinput')
   XMLOutput(@Body() XMLInput) {
-    return this.appService.Input(XMLInput);
+    return this.appService.ComparateResponceXML();
   }
 
   //@Get('/path')
