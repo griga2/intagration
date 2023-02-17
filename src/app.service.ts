@@ -98,6 +98,12 @@ export class AppService {
     return str + addedStr;
   }
 
+  CheckProducnt() {
+    const testXML =
+      ' <GetDataFromRMS xmlns="http://www.hclass.ru/hl1c"> <mdata>&lt;data_1c&gt; &lt;Param ID="ТипЗапроса" Val="Retail_ItemDesc"/&gt&lt;Param ID="Артикул" Val="109734892"/&gt;&lt;Table ID="ШтрихКоды"&gt;&lt;Row&gt;&lt;Col ID="ШтрихКод" Val="28705"/&gt;&lt;Col ID="ТипШтрихКода" Val="CODE39"/&gt; &lt;/Row&gt; &lt;/Table&gt;  &lt;/data_1c&gt; </mdata> <guid>eacaa172-3024-435d-b2af-e683c4f0e9a3</guid> </GetDataFromRMS> ';
+      
+    }
+
   placeInString(str, substr, index) {
     return str.substr(0, index) + substr + str.substr(index);
   }
