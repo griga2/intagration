@@ -8,8 +8,10 @@ export class AppService {
     return 'Hello World!';
   }
 
-  Input(InputXML) {
-    return this.ComporateItemXML('123123123');
+  TestInput(InputXML) {
+    console.log(InputXML);
+    
+    return InputXML;
   }
 
   SwithToTipe(InputXML) {
