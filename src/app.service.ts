@@ -1,7 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import axios from 'axios';
+import { json } from 'body-parser';
 import { parseString } from 'xml2js';
+import { MdataParser } from './mdata.parser';
 
+//InputData['soap:Envelope']['soap:Body'][0]['GetDataFromRMS'][0]
 @Injectable()
 export class AppService {
   getHello(): string {
@@ -10,13 +13,24 @@ export class AppService {
 
   TestInput(InputXML) {
     console.log(InputXML);
-    
     return InputXML;
   }
 
-  SwithToTipe(InputXML) {
-    const type = 'non type';
-    return type;
+  Input(InputData) {
+    //this.SwithToType(InputData);
+    //console.log(InputData['soap:Envelope']['soap:Body'][0]['GetDataFromRMS'][0]['mdata'][0]);
+    let DataToWork = MdataParser.Parse(
+      InputData['soap:Envelope']['soap:Body'][0]['GetDataFromRMS'][0]['mdata'], InputData
+    );
+    return DataToWork
+  }
+
+  SwithToType(InputData: object) {
+    let RequestType = 'non type';
+    //let = InputData['']
+    console.log(RequestType);
+
+    return RequestType;
   }
 
   ComporateItemXML(id) {

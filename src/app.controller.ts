@@ -13,24 +13,8 @@ export class AppController {
   }
 
   @Post('/')
-  XMLInput(@Request() InputXML, @Response() Output) {
-    const xmlreq = InputXML.body;
-    console.log(xmlreq);
-
-    const xml = '<root>Hello world<root>';
-    parseString(xml, function (err, result) {
-      console.log(result);
-    });
-    Output.set('Content-Type', 'text/xml; charset=utf-8');
-
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const xml2js = require('xml2js');
-
-    const obj = { name: 'Super', Surname: 'Man', age: 23 };
-
-    const builder = new xml2js.Builder();
-    const xmlka = builder.buildObject(obj);
-    Output.send(xmlka);
+  XMLInput(@Body() InputXML) {
+    return this.appService.Input(InputXML);
     //return this.appService.Input(InputXML);
   }
 
