@@ -2,6 +2,12 @@ import axios from 'axios';
 import { config } from 'process';
 
 export class RequestManager {
+  static CreateOrder() {
+    throw new Error('Method not implemented.');
+  }
+  static CreateSuplaer() {
+    throw new Error('Method not implemented.');
+  }
 
   static async CreateItem(InputData) {
     let status = 'fuck you';

@@ -32,15 +32,15 @@ export class AppService {
 
     switch (RequestType) {
       case 'Retail_ItemDesc': {
-        RequestManager.CreateItem();
+        RequestManager.CreateItem(InputData);
         break;
       }
       case 'Retail_OrderToSupplier': {
-
+        RequestManager.CreateOrder();
         break;
       }
       case 'Retail_Сontractor': {
-
+        RequestType.CreateSuplaer();
         break;
       }
     }
