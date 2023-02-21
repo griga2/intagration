@@ -1,4 +1,4 @@
-import { table } from "console";
+
 
 export class MdataParser {
   static Parse(mdataString: string, InputData) {
@@ -28,18 +28,11 @@ export class MdataParser {
         console.log(obj);
         obj = { space: [{ ParamID: ParamID }, { Value: Value }] };
         paramMas.push(obj);
-      }
-      //  else if (str.includes('Row') && addToRow != true) {
-      //   addToRow = true;
-      //   LesTimeRow.push({ Row: [] });
-      // } else if (str.includes('Row') && addToRow == true) {
-      //   addToRow = false;
-      //   paramMas.push({ Row: LesTimeRow });
-      //   LesTimeRow = [];
-      // }
-        else if (str.includes('Col')) {
-        //colID = str.substring('');
-        //value = str.substring('');
+      } else if (str.includes('Row') && true != true) {
+      } else if (str.includes('Row') && true == true) {
+      } else if (str.includes('Col')) {
+        //colID = str.substring(str.includes(''));
+        //value = str.substring(str.indexOf('Col ID')+8,str.indexOf(''));
         //LesTimeTable.push({[colID]:value});
       } else if (str.includes('Table') && addToTable == false) {
         addToTable = true;
@@ -48,7 +41,7 @@ export class MdataParser {
           str.indexOf('Table' + 8, str.indexOf('Val') - 2),
         );
         console.log(tableName);
-        
+
       } else if (str.includes('/Table') && addToTable == true) {
         paramMas.push({ [tableName]: LesTimeTable });
       }
