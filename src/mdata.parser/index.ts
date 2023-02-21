@@ -1,5 +1,3 @@
-
-
 export class MdataParser {
   static Parse(mdataString: string, InputData) {
     //console.log(mdataString);
@@ -7,42 +5,47 @@ export class MdataParser {
     const strMas = mdataString[0].split('>');
     const paramMas: Array<object> = [];
     let obj: object;
-
-
     let addToTable = false;
     let LesTimeTable = [];
     let tableName = '';
     for (const str of strMas) {
       //console.log(str);
-      let ParamID = 'Param huli';
-      let Value = 'Value hulie';
       if (str.includes('Param')) {
-        ParamID = str.substring(
+        let paramID = str.substring(
           10 + str.indexOf('Param'),
           str.indexOf('Val') - 2,
         );
-        Value = str.substring(str.indexOf('Val') + 5, str.lastIndexOf('"'));
-        ParamID.trim();
-        Value.trim();
+        let value = str.substring(str.indexOf('Val') + 5, str.lastIndexOf('"'));
+        paramID.trim();
+        value.trim();
 
         console.log(obj);
-        obj = { space: [{ ParamID: ParamID }, { Value: Value }] };
+        obj = { [paramID]: value };
         paramMas.push(obj);
       } else if (str.includes('Row') && true != true) {
       } else if (str.includes('Row') && true == true) {
       } else if (str.includes('Col')) {
-        //colID = str.substring(str.includes(''));
-        //value = str.substring(str.indexOf('Col ID')+8,str.indexOf(''));
-        //LesTimeTable.push({[colID]:value});
+        let colID = str.substring(
+          str.indexOf('Col') + 8,
+          str.indexOf('Val') - 2,
+        );
+        //console.log(colID);
+        let value = str.substring(
+          str.indexOf('Val') + 4,
+          str.lastIndexOf('/') - 1,
+        );
+        //console.log(value);
+        LesTimeTable.push({ [colID]: value });
       } else if (str.includes('Table') && addToTable == false) {
         addToTable = true;
 
         tableName = str.substring(
-          str.indexOf('Table' + 8, str.indexOf('Val') - 2),
+          str.indexOf('"') + 1,
+          str.lastIndexOf('"') - 1,
         );
-        console.log(tableName);
-
+        //console.log(tableName);
       } else if (str.includes('/Table') && addToTable == true) {
+        console.log(LesTimeTable.length);
         paramMas.push({ [tableName]: LesTimeTable });
       }
     }
